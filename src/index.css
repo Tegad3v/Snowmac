@@ -23,7 +23,7 @@
 
 @layer base {
   body {
-    @apply bg-dark font-inter overflow-x-hidden;
+    @apply bg-dark font-inter w-screen overflow-x-hidden;
   }
 
   section {
