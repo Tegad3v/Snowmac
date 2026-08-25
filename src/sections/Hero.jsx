@@ -8,7 +8,7 @@ import MotionElement from "../components/MotionElement";
 
 function Hero() {
   return (
-    <section className="relative min-h-screen p-0 text-white bg-no-repeat bg-cover bg-center overflow-hidden flex flex-col">
+    <section className="relative min-h-screen scroll-mt-0 p-0 text-white bg-no-repeat bg-cover bg-center overflow-hidden flex flex-col">
       {/* Desktop Background */}
       <MotionElement
         axis="y"
