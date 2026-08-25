@@ -32,7 +32,7 @@ import serImage_1 from "../assets/Images/ser-1.jpg";
 import serImage_2 from "../assets/Images/ser-2.jpg";
 import serImage_3 from "../assets/Images/ser-3.jpg";
 
-import { PiBlueprint } from "react-icons/pi";
+import { PiBlueprintFill } from "react-icons/pi";
 import { FaHelmetSafety } from "react-icons/fa6";
 import { MdConstruction } from "react-icons/md";
 
@@ -47,7 +47,7 @@ export const serviceDetails = [
       "3D visualization & renderings",
       "Renovation & remodeling design",
     ],
-    Icon: PiBlueprint,
+    Icon: PiBlueprintFill,
   },
   {
     imageUrl: serImage_2,
@@ -137,7 +137,7 @@ export const projects = [
   },
   {
     image: pjImage_4,
-    category: "RESIDENTIAL",
+    category: "COMMERCIAL DEVELOPMENT",
     title: "Project Capital point",
     location: "Ibadan, Nigeria",
     description:

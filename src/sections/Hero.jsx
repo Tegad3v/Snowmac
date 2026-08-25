@@ -8,7 +8,7 @@ import MotionElement from "../components/MotionElement";
 
 function Hero() {
   return (
-    <section className="relative p-0 min-h-screen text-white bg-no-repeat bg-cover bg-center overflow-hidden">
+    <section className="relative min-h-screen p-0 text-white bg-no-repeat bg-cover bg-center overflow-hidden flex flex-col">
       {/* Desktop Background */}
       <MotionElement
         axis="y"
@@ -78,7 +78,7 @@ function Hero() {
       <Navbar />
 
       {/* Hero content */}
-      <div className="relative z-10 w-full min-h-screen px-5 md:p-12 lg:p-30 flex justify-center items-center md:text-center">
+      <div className="relative z-10 w-full px-5 md:p-12 lg:p-30 flex justify-center items-center md:text-center">
         <div className="w-full flex flex-col gap-3 md:gap-5">
           {/* Mobile spacing */}
           <div className="h-15 md:hidden" />

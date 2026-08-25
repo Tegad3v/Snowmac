@@ -89,7 +89,13 @@ function CallToAction() {
           </p>
         </MotionElement>
 
-        <MotionElement axis="y" distance={40} delay={0.4} duration={0.7}>
+        <MotionElement
+          axis="y"
+          distance={40}
+          delay={0.4}
+          duration={0.7}
+          className="w-full"
+        >
           <div className="flex flex-col w-full md:w-fit md:flex-row gap-4 md:mx-auto">
             <Button link={`#contact`}>Make An Inquiry</Button>
 
@@ -103,7 +109,13 @@ function CallToAction() {
           </div>
         </MotionElement>
 
-        <MotionElement axis="y" distance={20} delay={0.5} duration={0.5}>
+        <MotionElement
+          axis="y"
+          distance={20}
+          delay={0.5}
+          duration={0.5}
+          className="mx-auto"
+        >
           <p className="max-w-xs md:max-w-fit text-[13px] md:text-{15px} leading-5 text-center mt-5 text-white/35">
             Trusted by homeowners, businesses and developers across Nigeria.
           </p>
