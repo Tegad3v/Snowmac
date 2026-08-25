@@ -92,7 +92,7 @@ function Hero() {
 
           {/* Heading */}
           <MotionElement distance={50} delay={0.2} duration={0.9}>
-            <h1 className="text-white text-[30px] md:text-[40px] lg:text-[60px] leading-9 md:leading-12.5 lg:leading-17 font-cinzel font-bold">
+            <h1 className="text-white text-[40px] lg:text-[60px] leading-9 md:leading-12.5 lg:leading-17 font-cinzel font-bold">
               INNOVATIVE <br />
               BUILDING SOLUTIONS, DELIVERED WITH EXCELLENCE
             </h1>
