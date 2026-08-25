@@ -23,11 +23,11 @@
 
 @layer base {
   body {
-    @apply bg-dark font-inter w-screen overflow-x-hidden;
+    @apply bg-dark font-inter;
   }
 
   section {
-    @apply scroll-mt-17.5 py-8 px-5 md:p-12 lg:p-30;
+    @apply w-full scroll-mt-17.5 py-8 px-5 md:p-12 lg:p-30;
   }
 
   .section-header {

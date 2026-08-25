@@ -4,7 +4,7 @@ import MotionElement from "../components/MotionElement";
 
 function Approach() {
   return (
-    <section className="bg-black text-white" id="approach">
+    <section className="bg-black text-white overflow-hidden" id="approach ">
       <div className="max-w-7xl mx-auto flex flex-col gap-5 sm:gap-6 md:gap-7">
         {/* Header */}
         <MotionElement

@@ -5,7 +5,7 @@ import MotionElement from "../components/MotionElement";
 
 function Projects() {
   return (
-    <section id="projects" className="bg-white">
+    <section id="projects" className="bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col gap-5 sm:gap-6">
         <MotionElement axis="y" distance={30} delay={0.1} duration={0.6}>
           <Badge className="text-brandGold">OUR PROJECTS</Badge>
