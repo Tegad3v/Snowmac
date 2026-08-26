@@ -9,9 +9,9 @@ import { facebook as fb } from "../Data/Data";
 function Footer() {
   const navLinks = [
     { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
     { label: "Sevices", href: "#services" },
     { label: "Our Approach", href: "#approach" },
+    { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -41,7 +41,7 @@ function Footer() {
           className="col-span-2 lg:col-span-2 flex flex-col gap-6"
         >
           <a href="#top">
-            <Logo className="text-[52px]" />
+            <Logo className="text-[40px] md:text-[52px]" />
           </a>
 
           <p
@@ -67,6 +67,9 @@ function Footer() {
               aria-label="Instagram"
               className="
                   w-8 h-8
+                  md:w-12
+                  md:h-12
+                  md:text-[22px]
                   rounded-full
                   bg-[#353535]
                   flex
@@ -78,7 +81,7 @@ function Footer() {
                   transition-colors
                 "
             >
-              <FaInstagram className="text-[16px]" />
+              <FaInstagram />
             </a>
 
             <a
@@ -86,6 +89,9 @@ function Footer() {
               aria-label="Facebook"
               className="
                   w-8 h-8
+                  md:w-12
+                  md:h-12
+                  md:text-[20px]
                   rounded-full
                   bg-[#353535]
                   flex
@@ -97,12 +103,12 @@ function Footer() {
                   transition-colors
                 "
             >
-              <FaFacebookF className="text-[15px]" />
+              <FaFacebookF />
             </a>
           </div>
         </MotionElement>
 
-        {/* Navigation */}
+        {/* Quick Links */}
         <MotionElement
           axis="y"
           distance={40}
@@ -240,12 +246,10 @@ function Footer() {
         </MotionElement>
       </div>
 
-      {/* Divider */}
       <MotionElement axis="y" distance={20} delay={0.5} duration={0.5}>
         <div className="border-t border-white/10" />
       </MotionElement>
 
-      {/* Bottom Footer */}
       <MotionElement
         axis="y"
         distance={30}
@@ -272,7 +276,6 @@ function Footer() {
           </p>
         </div>
 
-        {/* Legal */}
         <div className="flex items-center gap-4 text-xs sm:text-sm text-white/45">
           <a href="#" className="hover:text-brandGold transition-colors">
             Privacy Policy
