@@ -1,4 +1,4 @@
-function FormSelect({ label, options }) {
+function FormSelect({ label, options, value, onChange }) {
   return (
     <div className="flex flex-col gap-1">
       <label className="text-[10px] font-semibold">
@@ -7,24 +7,28 @@ function FormSelect({ label, options }) {
       </label>
 
       <select
-        defaultValue={options[0]}
+        value={value}
+        onChange={onChange}
         className="
           w-full
-          h-10
           rounded-lg
           border
           border-border
           bg-white
           px-3
+          py-3
           text-[12px]
-          text-black/60
           outline-none
           transition-colors
           focus:border-brandGold
         "
       >
-        {options.map((option, index) => (
-          <option key={index} value={option}>
+        <option value="" disabled>
+          Select project type
+        </option>
+
+        {options.map((option) => (
+          <option key={option} value={option}>
             {option}
           </option>
         ))}
