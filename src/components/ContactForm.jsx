@@ -39,7 +39,7 @@ function ContactForm() {
           label="Project Type"
           options={["Residential", "Commercial", "Institutional", "Others…"]}
           value={projectType}
-          onChange={(e) => setProjectType(e.target.value.toLowerCase())}
+          onChange={(e) => setProjectType(e.target.value)}
         />
       </div>
 
@@ -51,7 +51,7 @@ function ContactForm() {
         <textarea
           rows="5"
           placeholder={
-            projectType === "others…"
+            projectType.toLowerCase() === "others…"
               ? "Please specify the project type, location, and briefly tell us what you'd like to achieve..."
               : "Tell us briefly about your project, location and what you'd like to achieve..."
           }
