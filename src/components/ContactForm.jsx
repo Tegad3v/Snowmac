@@ -39,7 +39,7 @@ function ContactForm() {
           label="Project Type"
           options={["Residential", "Commercial", "Institutional", "Others…"]}
           value={projectType}
-          onChange={(e) => setProjectType(e.target.value)}
+          onChange={(e) => setProjectType(e.target.value.toLowerCase())}
         />
       </div>
 
