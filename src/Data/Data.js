@@ -112,7 +112,6 @@ export const projects = [
     image: pjImage_1,
     category: "RESIDENTIAL",
     title: "Project Ditrio",
-    location: "Ibadan, Nigeria",
     description:
       "A proposed residential development of three detached 3 bedroom duplex units. Each unit designed to provide a balance between aesthetics and usability.",
     span: "lg:col-span-2",
@@ -130,7 +129,6 @@ export const projects = [
     image: pjImage_3,
     category: "RESIDENTIAL",
     title: "Project HEXA",
-    location: "Ibadan, Nigeria",
     description:
       "A proposed development of 6 units of 3 bedroom modern apartments, designed for comfort, functionality and contemporary living.",
     span: "lg:col-span-3",
@@ -199,7 +197,7 @@ export const contactDetails = [
   {
     icon: "location",
     label: "VISIT US",
-    value: "1, Main Ilishin Avenue, Ibadan, Oyo State",
+    value: "1, Main Idi Ishin Avenue, Ibadan, Oyo State",
     href: "#",
     Icon: FaLocationPin,
   },

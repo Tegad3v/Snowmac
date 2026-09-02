@@ -111,7 +111,7 @@ function ProjectCard({
 
           <h4 className="font-cinzel font-bold text-xl sm:text-2xl">{title}</h4>
 
-          <p className="text-sm text-black/60">{location}</p>
+          {location && <p className="text-sm text-black/60">{location}</p>}
 
           <p className="text-sm text-black/60 leading-5">{description}</p>
         </div>

@@ -1,8 +1,11 @@
+import { useState } from "react";
 import Button from "../components/Button";
 import FormInput from "./FormInput";
 import FormSelect from "./FormSelect";
 
 function ContactForm() {
+  const [projectType, setProjectType] = useState("");
+
   return (
     <form className="flex flex-col gap-4">
       {/* Form Heading */}
@@ -34,36 +37,24 @@ function ContactForm() {
 
         <FormSelect
           label="Project Type"
-          options={[
-            "Select Project Type",
-            "Architectural CgDesignmodo",
-            "Construction",
-            "General Building Services",
-          ]}
+          options={["residential", "commercial", "institutional", "others…"]}
+          value={projectType}
+          onChange={(e) => setProjectType(e.target.value)}
         />
       </div>
-
-      {/* Budget */}
-      <FormSelect
-        label="Estimated Budget"
-        options={[
-          "Select Budget Range",
-          "₦1M – ₦5M",
-          "₦5M – ₦10M",
-          "₦10M – ₦50M",
-          "₦50M+",
-        ]}
-      />
 
       {/* Project Details */}
       <div className="flex flex-col gap-1">
         <label className="text-[10px] font-semibold">
           Project Details<span className="text-brandGold">*</span>
         </label>
-
         <textarea
           rows="5"
-          placeholder="Tell us briefly about your project, location and what you'd like to achieve..."
+          placeholder={
+            projectType === "others…"
+              ? "Please specify the project type, location, and briefly tell us what you'd like to achieve..."
+              : "Tell us briefly about your project, location and what you'd like to achieve..."
+          }
           className="
                   w-full
                   resize-none
