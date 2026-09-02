@@ -37,7 +37,7 @@ function ContactForm() {
 
         <FormSelect
           label="Project Type"
-          options={["residential", "commercial", "institutional", "others…"]}
+          options={["Residential", "Commercial", "Institutional", "Others…"]}
           value={projectType}
           onChange={(e) => setProjectType(e.target.value)}
         />
