@@ -198,7 +198,7 @@ export const contactDetails = [
     icon: "location",
     label: "VISIT US",
     value: "1, Main Idi Ishin Avenue, Ibadan, Oyo State",
-    href: "#",
+    href: "https://maps.app.goo.gl/44SLEoM2eai8oQ786",
     Icon: FaLocationPin,
   },
   {
