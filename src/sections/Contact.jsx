@@ -52,6 +52,7 @@ function Contact() {
                         {i.href ? (
                           <a
                             href={i.href}
+                            target="_blank"
                             className="text-[13px] text-black/80 hover:text-brandGold transition-colors"
                           >
                             {i.value}
