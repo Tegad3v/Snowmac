@@ -1,13 +1,13 @@
-console.log("API Key present:", !!process.env.MAILERLITE_API_KEY);
+// netlify/functions/subscribe.js
 
-export const handler = async (event) => {
+exports.handler = async (event) => {
   // Only allow POST requests
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
 
   try {
-    // Parse the email from the request body
+    // 1. Get the email from the request body
     const { email } = JSON.parse(event.body);
 
     if (!email) {
@@ -17,20 +17,30 @@ export const handler = async (event) => {
       };
     }
 
-    // Make the request to MailerLite
-    // API key and Group ID are accessed via process.env (set in Netlify UI)
+    // 2. Get credentials from environment variables
+    const API_KEY = process.env.EMAILOCTOPUS_API_KEY;
+    const LIST_ID = process.env.EMAILOCTOPUS_LIST_ID;
+
+    if (!API_KEY || !LIST_ID) {
+      console.error("Missing EmailOctopus environment variables.");
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: "Server configuration error." }),
+      };
+    }
+
+    // 3. Make the request to EmailOctopus
     const response = await fetch(
-      "https://connect.mailerlite.com/api/subscribers",
+      `https://emailoctopus.com/api/1.6/lists/${LIST_ID}/contacts`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
-          Authorization: `Bearer ${process.env.MAILERLITE_API_KEY}`,
         },
         body: JSON.stringify({
-          email: email,
-          groups: [process.env.MAILERLITE_GROUP_ID],
+          api_key: API_KEY,
+          email_address: email,
+          status: "SUBSCRIBED", // Use "PENDING" if you have double opt-in enabled
         }),
       },
     );
@@ -38,13 +48,17 @@ export const handler = async (event) => {
     const data = await response.json();
 
     if (!response.ok) {
-      console.error("MailerLite API Error:", data);
+      // EmailOctopus returns errors in a different shape
+      console.error("EmailOctopus API Error:", data);
+      // The error message is often in data.error.message
+      const errorMessage = data.error?.message || "Failed to subscribe";
       return {
         statusCode: response.status,
-        body: JSON.stringify(data),
+        body: JSON.stringify({ error: errorMessage }),
       };
     }
 
+    // Success!
     return {
       statusCode: 200,
       body: JSON.stringify({ message: "Subscribed successfully!" }),
