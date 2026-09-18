@@ -1,27 +1,13 @@
-import { FaInstagram, FaFacebookF } from "react-icons/fa6";
 import Logo from "../components/Logo";
 import MotionElement from "../components/MotionElement";
-
-import { ig } from "../Data/Data";
-
-import { facebook as fb } from "../Data/Data";
+import {
+  footerNavLinks,
+  footerServices,
+  footerSocialLinks,
+} from "../Data/Data";
 // import NewsLetter from "../components/NewsLetter";
 
 function Footer() {
-  const navLinks = [
-    { label: "About", href: "#about" },
-    { label: "Sevices", href: "#services" },
-    { label: "Our Approach", href: "#approach" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
-  ];
-
-  const services = [
-    { label: "Design", href: "#services" },
-    { label: "Construction", href: "#services" },
-    { label: "General Building Services", href: "#services" },
-  ];
-
   return (
     <footer className="relative bg-black text-white px-5 py-8 md:p-12 lg:p-30">
       <div
@@ -63,10 +49,12 @@ function Footer() {
 
           {/* Socials */}
           <div className="flex gap-3 mt-2">
-            <a
-              href={ig}
-              aria-label="Instagram"
-              className="
+            {footerSocialLinks.map((i, index) => (
+              <a
+                key={index}
+                href={i.link}
+                aria-label={i.title}
+                className="
                   w-8 h-8
                   md:w-12
                   md:h-12
@@ -81,31 +69,10 @@ function Footer() {
                   hover:text-black
                   transition-colors
                 "
-            >
-              <FaInstagram />
-            </a>
-
-            <a
-              href={fb}
-              aria-label="Facebook"
-              className="
-                  w-8 h-8
-                  md:w-12
-                  md:h-12
-                  md:text-[20px]
-                  rounded-full
-                  bg-[#353535]
-                  flex
-                  items-center
-                  justify-center
-                  text-white
-                  hover:bg-brandGold
-                  hover:text-black
-                  transition-colors
-                "
-            >
-              <FaFacebookF />
-            </a>
+              >
+                <i.Icon />
+              </a>
+            ))}
           </div>
         </MotionElement>
 
@@ -122,7 +89,7 @@ function Footer() {
           </h3>
 
           <div className="flex flex-col gap-4">
-            {navLinks.map((link, index) => (
+            {footerNavLinks.map((link, index) => (
               <MotionElement
                 key={link.label}
                 axis="y"
@@ -162,7 +129,7 @@ function Footer() {
           </h3>
 
           <div className="flex flex-col gap-4">
-            {services.map((service, index) => (
+            {footerServices.map((service, index) => (
               <MotionElement
                 key={service.label}
                 axis="y"

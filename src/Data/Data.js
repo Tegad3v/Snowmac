@@ -1,8 +1,3 @@
-export const ig =
-  "https://www.instagram.com/snowmac_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D";
-
-export const facebook = "https://www.facebook.com/snowmacgroup/";
-
 export const keyMetrics = [
   {
     metric: "5",
@@ -213,5 +208,34 @@ export const contactDetails = [
     label: "OFFICE HOURS",
     value: "Monday – Friday · 8:00 AM – 5:00 PM",
     Icon: BsFillClockFill,
+  },
+];
+
+import { FaInstagram, FaFacebookF } from "react-icons/fa6";
+
+export const footerNavLinks = [
+  { label: "About", href: "#about" },
+  { label: "Sevices", href: "#services" },
+  { label: "Our Approach", href: "#approach" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
+
+export const footerServices = [
+  { label: "Design", href: "#services" },
+  { label: "Construction", href: "#services" },
+  { label: "General Building Services", href: "#services" },
+];
+
+export const footerSocialLinks = [
+  {
+    title: "Instagram",
+    link: "https://www.instagram.com/snowmac_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D",
+    Icon: FaInstagram,
+  },
+  {
+    title: "Facebook",
+    link: "https://www.facebook.com/snowmacgroup/",
+    Icon: FaFacebookF,
   },
 ];
