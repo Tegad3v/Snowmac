@@ -1,4 +1,4 @@
-// netlify/functions/subscribe.js
+console.log("API Key present:", !!process.env.MAILERLITE_API_KEY);
 
 export const handler = async (event) => {
   // Only allow POST requests
