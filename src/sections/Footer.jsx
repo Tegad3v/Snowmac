@@ -188,8 +188,28 @@ function Footer() {
           </div>
         </MotionElement>
 
-        {/* Newsletter */}
-        <NewsLetter />
+        {/* Our Commitment */}
+        <MotionElement
+          axis="y"
+          distance={40}
+          delay={0.4}
+          duration={0.7}
+          className="flex flex-col gap-5"
+        >
+          <h3 className="font-inter text-[11px] font-semibold tracking-[10%] uppercase text-brandGold">
+            OUR COMMITMENT
+          </h3>
+
+          <p
+            className="max-w-xs font-inter
+                    text-sm
+                    text-white/65"
+          >
+            Thoughtful design. <br />
+            Precision execution. <br />
+            Exceptional results.
+          </p>
+        </MotionElement>
       </div>
 
       <MotionElement axis="y" distance={20} delay={0.5} duration={0.5}>
