@@ -5,7 +5,7 @@ import MotionElement from "../components/MotionElement";
 import { ig } from "../Data/Data";
 
 import { facebook as fb } from "../Data/Data";
-import NewsLetter from "../components/NewsLetter";
+// import NewsLetter from "../components/NewsLetter";
 
 function Footer() {
   const navLinks = [
