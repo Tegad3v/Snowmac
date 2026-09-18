@@ -26,6 +26,7 @@ function ContactForm() {
     },
   });
 
+  // eslint-disable-next-line react-hooks/incompatible-library
   const projectType = watch("projectType");
 
   const onSubmit = async (data) => {

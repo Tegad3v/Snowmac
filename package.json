@@ -20,7 +20,8 @@
     "react-icons": "^5.7.0",
     "react-router": "^8.3.0",
     "swiper": "^14.1.0",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.3",
+    "use-mailchimp-form": "^3.2.3"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
