@@ -174,8 +174,8 @@ export const testimonials = [
     image: "",
     quote:
       "Working with Snowmac was seamless. They understood our vision, respected the timeline, and delivered a space that exceeded what we had envisioned.",
-    name: "Grace Chapel International",
-    initial: "GC",
+    name: "Tunde Olawale",
+    initial: "TO",
     role: "Institutional Client",
     rating: 5,
   },
