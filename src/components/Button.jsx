@@ -46,7 +46,7 @@ function Button({
 
   // Default: link-style button
   return (
-    <a href={link} className={baseClasses}>
+    <a href={link} target="_blank" className={baseClasses}>
       {content}
     </a>
   );

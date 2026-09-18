@@ -100,7 +100,7 @@ function CallToAction() {
             <Button link={`#contact`}>Make An Inquiry</Button>
 
             <Button
-              link={`#contact`}
+              link={`https://wa.me/2349117289298`}
               type="secondary"
               className={"text-brandGold!"}
             >
