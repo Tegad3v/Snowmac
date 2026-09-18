@@ -3,8 +3,6 @@ export const ig =
 
 export const facebook = "https://www.facebook.com/snowmacgroup/";
 
-console.log(ig, facebook);
-
 export const keyMetrics = [
   {
     metric: "5",
@@ -170,6 +168,15 @@ export const testimonials = [
     name: "Capital Point",
     initial: "CP",
     role: "Property Developer",
+    rating: 5,
+  },
+  {
+    image: "",
+    quote:
+      "Working with Snowmac was seamless. They understood our vision, respected the timeline, and delivered a space that exceeded what we had envisioned.",
+    name: "Grace Chapel International",
+    initial: "GC",
+    role: "Institutional Client",
     rating: 5,
   },
 ];
