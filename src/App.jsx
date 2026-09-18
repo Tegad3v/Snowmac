@@ -9,10 +9,12 @@ import KeyMetrics from "./sections/KeyMetrics";
 import Projects from "./sections/Projects";
 import Services from "./sections/Services";
 import Testimonial from "./sections/Testimonial";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <>
+      <Toaster position="bottom-right" />
       <Hero />
       <KeyMetrics />
       <About />
