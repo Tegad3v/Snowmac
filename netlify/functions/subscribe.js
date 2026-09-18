@@ -7,7 +7,7 @@ exports.handler = async (event) => {
   }
 
   try {
-    // 1. Get the email from the request body
+    // 1. Get the email from the request body sent by your React form
     const { email } = JSON.parse(event.body);
 
     if (!email) {
@@ -29,18 +29,18 @@ exports.handler = async (event) => {
       };
     }
 
-    // 3. Make the request to EmailOctopus
+    // 3. Make the request to EmailOctopus V2 API
     const response = await fetch(
-      `https://emailoctopus.com/api/1.6/lists/${LIST_ID}/contacts`,
+      `https://api.emailoctopus.com/lists/${LIST_ID}/contacts`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${API_KEY}`, // V2 uses Bearer token in header
         },
         body: JSON.stringify({
-          api_key: API_KEY,
           email_address: email,
-          status: "SUBSCRIBED", // Use "PENDING" if you have double opt-in enabled
+          status: "subscribed", // V2 uses lowercase for status
         }),
       },
     );
@@ -48,10 +48,12 @@ exports.handler = async (event) => {
     const data = await response.json();
 
     if (!response.ok) {
-      // EmailOctopus returns errors in a different shape
+      // Log the actual error for debugging
       console.error("EmailOctopus API Error:", data);
-      // The error message is often in data.error.message
-      const errorMessage = data.error?.message || "Failed to subscribe";
+
+      // Extract a readable error message from the V2 RFC 7807 response
+      const errorMessage = data.detail || "Failed to subscribe";
+
       return {
         statusCode: response.status,
         body: JSON.stringify({ error: errorMessage }),
